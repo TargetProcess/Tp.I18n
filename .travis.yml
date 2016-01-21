@@ -1,0 +1,9 @@
+language: csharp
+sudo: false
+solution: src/Tp.I18n.sln
+install:
+  - nuget restore src/Tp.I18n.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release src/Tp.I18n.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./src/Tp.I18n.Tests/bin/Release/Tp.I18n.Tests.dll
