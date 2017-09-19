@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Jeffijoe.MessageFormat;
 using Jeffijoe.MessageFormat.Formatting;
 
